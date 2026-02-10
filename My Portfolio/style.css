@@ -1,0 +1,91 @@
+/* Global Font */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HERO GRADIENT */
+.animated-gradient {
+  background: linear-gradient(-45deg,
+    #0d0d0d,
+    #1b1b3a,
+    #3a86ff,
+    #2b2d42,
+    #8338ec,
+    #1f1f1f
+  );
+  background-size: 500% 500%;
+  animation: gradientMove 10s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Optional Overlay */
+#hero {
+  position: relative;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+#hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Profile Image */
+.profile-img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+/* Skills */
+.skill-box {
+  background: white;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Experience Cards */
+.exp-card {
+  background: white;
+  color: black;
+}
+
+/* Project Cards */
+.project-card {
+  background: white;
+  color: black;
+}
+
+.project-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Carousel styling */
+.carousel-indicators [data-bs-target] {
+  background-color: #007bff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
